@@ -12,7 +12,7 @@ from tools import admin_login
 test_headers= admin_login.test_headers()
 def create_user():
     headers=test_headers
-    url = "https://live-admin-qa1.youfenba.com/api/v1/manager"
+    url =
     dict1={
         'company': "勿删除",
         'company_short': "勿删",

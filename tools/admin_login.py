@@ -9,12 +9,14 @@
 #登录管理后台，获取管理后台token#
 import pytest
 import requests
+import tools.all_url
+import yaml
 def test_adminLogin():
     dict1={
         'username':'admin',
         'password':'123123'
     }
-    url = " https://live-admin-qa1.youfenba.com/api/v1/login"
+    url = tools.all_url.all_user()
     res = requests.post(url=url,json=dict1)
     r=res.json()
     test_headers=(r['data'])['token']

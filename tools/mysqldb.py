@@ -17,24 +17,27 @@ db='douyin_livetools',
 charset='utf8'
 )
 #查询数据#
-def select_test():
-    cur = db.cursor()
-    sql = 'select * from manager where id = 14915'
+cur = db.cursor()
+sql = "select * from manager where id = 14915"
 
-    cur.execute(sql)
-    for i in cur.fetchall():
-        print(i)
-    print("共查询到：",cur.rowcount)
+cur.execute(sql)
+res = cur.fetchall()
+print(res)
+
+cur.close()
+db.close()
+
+
+# def select_test():
 
 
 
     # r = (res[0])[0]
     # print((res[0])[0])
-    cur.close()
-    db.close()
+
     # return r
 
-select_test()
+# select_test()
 # cur = db.cursor()
 #
 
