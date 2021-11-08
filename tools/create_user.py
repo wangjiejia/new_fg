@@ -18,12 +18,13 @@ def create_user():
         'company_short': "勿删",
         'logo': "",
         'password': "123456",
-        'username': "zy_test"
+        'username': "wj_test"
     }
     res=requests.post(url=url,json=dict1,headers=headers)
     r=res.json()
-    print((r['data'])['id'])
-    return (r['data'])['id']
+    print(r)
+    # print((r['data'])['id'])
+    # return (r['data'])['id']
 
 
 
