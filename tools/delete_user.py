@@ -9,12 +9,13 @@
 import pytest
 import requests
 
-from tools import create_user
-# from tools import admin_login
-id = create_user.create_user()
-# test_headers= admin_login.test_headers()
-def del_user():
 
+# from tools import admin_login
+# id = create_user.create_user()
+# test_headers= admin_login.test_headers()
+from tools.mysqldb import select_test
+id = select_test()
+def del_user():
     url='https://live-admin-qa1.youfenba.com/api/v1/manager/' + str(id)
     res=requests.delete(url=url)
     print(url)

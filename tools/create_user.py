@@ -26,5 +26,7 @@ def create_user():
     # print((r['data'])['id'])
     # return (r['data'])['id']
 
+create_user()
+
 
 
