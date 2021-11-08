@@ -11,6 +11,7 @@ import pytest
 import requests
 import tools.all_url
 import yaml
+from tools.get_yaml import read_yml
 # def test_adminLogin():
 #     dict1={
 #         'username':'admin',
@@ -27,11 +28,10 @@ import yaml
 #     headers = {'user-agent': 'Mozilla/5.0','content-type': 'application/json;charset=UTF-8','Authorization': 'Bearer {0}'.format(token)}
 #     return headers
 # test_headers()
-from tools.get_yaml import read_yml
+
 
 def test_adminLogin():
     url = read_yml()
-    print(url)
 
 
 test_adminLogin()
