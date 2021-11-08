@@ -6,11 +6,10 @@
 @IDE ：PyCharm
 @Motto：ABC(Always Be Coding)
 """
-
+#登录管理后台，获取管理后台token#
 import pytest
 import requests
-
-def test_ww():
+def test_adminLogin():
     dict1={
         'username':'admin',
         'password':'123123'
@@ -22,9 +21,8 @@ def test_ww():
     return test_headers
 
 def test_headers():
-    token = test_ww()
+    token = test_adminLogin()
     headers = {'user-agent': 'Mozilla/5.0','content-type': 'application/json;charset=UTF-8','Authorization': 'Bearer {0}'.format(token)}
-
     return headers
 test_headers()
 
