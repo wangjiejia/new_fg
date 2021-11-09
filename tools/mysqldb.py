@@ -8,7 +8,7 @@
 """
 #连接数据库#
 import pymysql
-db = pymysql.connect(
+conn = pymysql.connect(
 host='118.178.114.233',
 port=30200,
 user='root',
@@ -16,16 +16,18 @@ password='youfenbBwoca123',
 db='douyin_livetools',
 charset='utf8'
 )
-#查询数据#
-cur = db.cursor()
-sql = "select * from manager where id = 14915"
 
-cur.execute(sql)
+#查询数据#
+cur = conn.cursor()
+cur.execute("select * from manager where username = 'wj_test' ORDER BY id DESC")
+
 res = cur.fetchall()
-print(res)
+for d in res:
+    print(d)
+
 
 cur.close()
-db.close()
+conn.close()
 
 
 # def select_test():

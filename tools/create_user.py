@@ -8,11 +8,13 @@
 """
 import pytest
 import requests
+import os
 from tools import admin_login
+from tools.get_yaml import read_yml
 test_headers= admin_login.test_headers()
 def create_user():
     headers=test_headers
-    url =
+    url = (read_yml()).get(os.path.split(__file__)[-1].split(".")[0])
     dict1={
         'company': "勿删除",
         'company_short': "勿删",
