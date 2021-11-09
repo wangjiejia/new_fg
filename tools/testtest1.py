@@ -1,17 +1,19 @@
-# -*- encoding: utf-8 -*-
+# -*- coding: utf-8 -*-
 """
-@Time ： 2021/11/8 11:47
+@Time ： 2021/11/9 11:42
 @Auth ： jiejia
-@File ：mysqldb.py
+@File ：testtest1.py
 @IDE ：PyCharm
 @Motto：ABC(Always Be Coding)
 """
+# -*- encoding: utf-8 -*-
+
 
 #连接数据库#
 import pymysql
 conn = pymysql.connect(
 host='118.178.114.233',
-port=30200,
+port=31445,
 user='root',
 password='youfenbBwoca123',
 db='douyin_livetools'
@@ -27,23 +29,4 @@ print(res)
 cur.close()
 conn.close()
 
-
-# def select_test():
-
-
-
-    # r = (res[0])[0]
-    # print((res[0])[0])
-
-    # return r
-
-# select_test()
-# cur = db.cursor()
-#
-
-# #获取第一行数据#
-# res_1 = cur.fetchone()
-# print(res_1)
-# cur.close()
-# db.close()
 
