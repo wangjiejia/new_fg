@@ -6,20 +6,19 @@
 @IDE ：PyCharm
 @Motto：ABC(Always Be Coding)
 """
-#获取到yml文件中的数据#
+#获取到yml文件中的数据,打开yml文件#
 from distutils.log import info
 #直接输出文件名对应的URL#
 import yaml
-#get_yaml#
-
 import os
 def read_yml():
     with open('all.yml',encoding='UTF-8')as f:
         data = yaml.load(f,Loader=yaml.FullLoader)
-        name = "wjj"
+        return data
+        #输出当前文件的文件名#
         # name = os.path.split(__file__)[-1].split(".")[0]
-        key = data.get(name)
-        return key
+
+
 
 
 

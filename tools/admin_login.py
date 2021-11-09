@@ -11,30 +11,28 @@ import pytest
 import requests
 import tools.all_url
 import yaml
+import os
 from tools.get_yaml import read_yml
-# def test_adminLogin():
-#     dict1={
-#         'username':'admin',
-#         'password':'123123'
-#     }
-#     url = tools.all_url.all_user()
-#     res = requests.post(url=url,json=dict1)
-#     r=res.json()
-#     test_headers=(r['data'])['token']
-#     return test_headers
-#
-# def test_headers():
-#     token = test_adminLogin()
-#     headers = {'user-agent': 'Mozilla/5.0','content-type': 'application/json;charset=UTF-8','Authorization': 'Bearer {0}'.format(token)}
-#     return headers
-# test_headers()
-
-
 def test_adminLogin():
-    url = read_yml()
+    dict1={
+        'username':'admin',
+        'password':'123123'
+    }
+    url = (read_yml()).get(os.path.split(__file__)[-1].split(".")[0])
+    res = requests.post(url=url,json=dict1)
+    r=res.json()
+    test_headers=(r['data'])['token']
+    return test_headers
+
+def test_headers():
+    token = test_adminLogin()
+    headers = {'user-agent': 'Mozilla/5.0','content-type': 'application/json;charset=UTF-8','Authorization': 'Bearer {0}'.format(token)}
+    return headers
+test_headers()
 
 
-test_adminLogin()
+
+
 
 
 
