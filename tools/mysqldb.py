@@ -21,9 +21,9 @@ charset='utf8'
 cur = conn.cursor()
 cur.execute("select * from manager where username = 'wj_test' ORDER BY id DESC")
 
-res = cur.fetchall()
-for d in res:
-    print(d)
+res = cur.fetchone()
+# for d in res:
+#     print(d)
 
 
 cur.close()
