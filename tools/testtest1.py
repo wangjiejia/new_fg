@@ -7,8 +7,7 @@
 @Motto：ABC(Always Be Coding)
 """
 # -*- encoding: utf-8 -*-
-
-
+##
 #连接数据库#
 import pymysql
 conn = pymysql.connect(
