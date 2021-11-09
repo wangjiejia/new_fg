@@ -1,7 +1,9 @@
 #将所有URL都写在yaml文件中，再从yaml文件中进行读取#
-admin_login: https://live-admin-qa1.youfenba.com/api/v1/login
-create_user: https://live-admin-qa1.youfenba.com/api/v1/manager
-delete_user: https://live-admin-qa1.youfenba.com/api/v1/manager/
+test_admin_login: https://live-admin-qa1.youfenba.com/api/v1/login
+test_create_user: https://live-admin-qa1.youfenba.com/api/v1/manager
+test_delete_user: https://live-admin-qa1.youfenba.com/api/v1/manager/
+test_user_login: https://live-tools-qa1.youfenba.com/api/v1/login
+test_update_version: https://live-admin-qa1.youfenba.com/api/v1/manager/order
 
 
 

@@ -9,10 +9,10 @@
 import pytest
 import requests
 import os
-from tools import admin_login
+from tools import test_admin_login
 from tools.get_yaml import read_yml
-test_headers= admin_login.test_headers()
-def create_user():
+test_headers= test_admin_login.test_headers()
+def test_create_user():
     headers=test_headers
     url = (read_yml()).get(os.path.split(__file__)[-1].split(".")[0])
     dict1={
@@ -28,7 +28,7 @@ def create_user():
     # print((r['data'])['id'])
     # return (r['data'])['id']
 
-create_user()
+test_create_user()
 
 
 
