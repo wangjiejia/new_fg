@@ -14,13 +14,14 @@ conn = pymysql.connect(
 host='118.178.114.233',
 port=31445,
 user='root',
-password='youfenbBwoca123',
+password='AyoufenbBwoca123',
 db='douyin_livetools'
 )
 print(conn)
 #查询数据#
 cur = conn.cursor()
-sql = "select * from manager order by id desc limit 1"
+# sql = "select * from manager order by id desc limit 1"
+sql = "select * from manager where username='wj_test' and deleted_at is null"
 print(sql)
 cur.execute(sql)
 res = cur.fetchone()
