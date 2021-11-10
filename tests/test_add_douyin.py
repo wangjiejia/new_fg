@@ -26,7 +26,7 @@ def test_add_douyin():
     manager_id = res_select[0]
     data = {
         "id":12435,
-        "manager_id": 90999,
+        "manager_id": manager_id,
         "account":"mianchaokeji",
         "uid":"1754443783083283",
         "nickname":"飞瓜智投运营号",
