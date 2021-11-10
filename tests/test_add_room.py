@@ -6,11 +6,13 @@
 @IDE ：PyCharm
 @Motto：ABC(Always Be Coding)
 """
+#为该抖音号添加直播间#
+#douyin_room中新增一条记录，将原始的所有数据都关联到新的用户，原来的抖音号下#
 import pymysql
 import pytest
 import requests
 from pymysql import NULL
-from tools.sql import select_sql
+from tools.sql import select_sql,select_sql1
 def test_douyin_id():
     ids = select_sql("select id from douyin_room ORDER BY id desc LIMIT 1")
     id = ids[0] + 1
@@ -18,6 +20,7 @@ def test_douyin_id():
     return id
 def test_add_douyin():
      id = test_douyin_id()
+     douyin_id = select_sql1("select id from douyin ORDER BY id desc LIMIT 1")
      conn = pymysql.connect(
          host='118.178.114.233',
          port=31445,
@@ -31,21 +34,23 @@ def test_add_douyin():
      data = {
             "id": id,
             "manager_id": manager_id,
-            "douyin_id": "mianchaokeji",
+            "douyin_id": douyin_id,
             "uid": "82914947908",
-            "room_id": "飞瓜智投运营号",
-            "auto_record": "https://p9.douyinpic.com/img/tos-cn-avt-0015/ed0098a80d03dd93d60cc8e2a1e042a0~c5_300x300.jpeg?from=2956013662",
-            "is_history": "飞瓜数据旗下飞瓜智投",
-            "delete_status": "0.00",
-            "gmv": 32,
-            "cost": 188,
-            "order_num": 1244,
-            "start_time": 0,
-            "duration": 0,
+            "room_id": "7018488034958002980",
+            "title":"三只松鼠坚果礼上新，假期旅游囤货必备！",
+            "auto_record": 1,
+            "is_show":1,
+            "is_history": 0,
+            "delete_status": 0,
+            "gmv": 20079290,
+            "cost": 4959861,
+            "order_num": 1558,
+            "start_time": '1634119334',
+            "duration": 28733,
             "plan_id": 0,
-            "tab_id": NULL,
-            "created_at": "2021-05-20 16:30:58",
+            "tab_id": 0,
             "updated_at": "2021-11-05 18:25:41",
+            "created_at": "2021-05-20 16:30:58",
             "deleted_at": "2021-05-24 14:08:11"
         }
      table = 'douyin_room'
@@ -62,7 +67,4 @@ def test_add_douyin():
          conn.rollback()
      finally:
          conn.close()
-
-
-
 test_add_douyin()

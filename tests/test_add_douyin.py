@@ -18,8 +18,6 @@ def test_douyin_id():
     id = ids[0]+1
     print(id)
     return id
-
-
 def test_add_douyin():
     id = test_douyin_id()
     conn = pymysql.connect(
@@ -35,21 +33,21 @@ def test_add_douyin():
     data = {
         "id":id,
         "manager_id": manager_id,
-        "account":"mianchaokeji",
-        "uid":"1754443783083283",
-        "nickname":"飞瓜智投运营号",
-        "avatar":"https://p9.douyinpic.com/img/tos-cn-avt-0015/ed0098a80d03dd93d60cc8e2a1e042a0~c5_300x300.jpeg?from=2956013662",
-        "`desc`":"飞瓜数据旗下飞瓜智投",
+        "account":"songshu0619",
+        "uid":"82914947908",
+        "nickname":"三只松鼠",
+        "avatar":"https://p3.huoshanimg.com/img/aweme-avatar/mosaic-legacy_31915000811b51868fe24~c5_300x300.jpeg?from=2956013662",
+        "`desc`":"吃坚果、找快乐、来三只松鼠就够了",
         "praise":"0.00",
-        "awemes":32,
-        "like_count":188,
-        "fan_count":1244,
+        "awemes":593,
+        "like_count":17694370,
+        "fan_count":5028772,
         "with_shop":0,
         "dou":0,
         "balance":0,
         "origin_uid":NULL,
-        "buyin_status":4,
-        "buyin_token":"",
+        "buyin_status":5,
+        "buyin_token":"livetools_token:buyin:e82e5ff532c59c313e7cf7d4687d0fdc_lf",
         "buyin_data":"",
         "buyin_token_at":"2021-06-08 14:06:41",
         "token":NULL,

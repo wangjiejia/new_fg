@@ -41,6 +41,26 @@ def select_sql(sel_sql):
     conn.close()
     return res
 
+def select_sql1(sel_sql1):
+    conn = pymysql.connect(
+        host='118.178.114.233',
+        port=31445,
+        user='root',
+        password='AyoufenbBwoca123',
+        db='douyin_livetools'
+    )
+    print(conn)
+    cur = conn.cursor()
+    # sql = "select * from manager where username = 'wj_test' and deleted_at is null"
+    # print(sql)
+    cur.execute(sel_sql1)
+    print(sel_sql1)
+    res = cur.fetchone()
+    print(res)
+    cur.close()
+    conn.close()
+    return res
+
 
 #删除数据#
 def detete_sql(del_sql):
