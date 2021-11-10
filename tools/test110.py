@@ -51,5 +51,7 @@ data = {
 }
 key=','.join(data.keys())
 # val = data.values()
-val=values=','.join(['%s']*len(data))
+values = tuple(data.values())
+print(values)
+# val=values=','.join(['%s']*len(data))
 print(key)

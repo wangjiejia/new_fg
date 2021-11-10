@@ -11,7 +11,9 @@ import os
 import requests
 from tools.get_yaml import read_yml
 from tools.test_admin_login  import test_headers
+from tools.sql import select_sql
 def test_update_version():
+    user_id = select_sql("select id from manager where username = 'wj_test'")
     url = (read_yml()).get(os.path.split(__file__)[-1].split(".")[0])
     header =  test_headers()
     dict={
@@ -26,7 +28,7 @@ def test_update_version():
         "is_hide":"0",
         "days_num":30,
         "days":30,
-        "user_id":14920,
+        "user_id":user_id[0],
         "edition_id":1,
         "img":"",
         "account_limit":20,

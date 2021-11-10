@@ -8,11 +8,20 @@
 """
 #直接使用插入语句添加抖音号#
 #使用data进行传参，再传到入参里去#
+#先把所有的values值都先用占位符替换，然后再执行sql语句时，再把所有的占位符用字典里的值替换掉#
 import os
 import pymysql
 from pymysql import NULL
 from tools.sql import select_sql,insert_sql
+def test_douyin_id():
+    ids =  select_sql("select id from douyin ORDER BY id desc LIMIT 1")
+    id = ids[0]+1
+    print(id)
+    return id
+
+
 def test_add_douyin():
+    id = test_douyin_id()
     conn = pymysql.connect(
         host='118.178.114.233',
         port=31445,
@@ -21,17 +30,16 @@ def test_add_douyin():
         db='douyin_livetools'
     )
     print(conn)
-
     res_select = select_sql("select id from manager ORDER BY id desc LIMIT 1")
     manager_id = res_select[0]
     data = {
-        "id":12435,
+        "id":id,
         "manager_id": manager_id,
         "account":"mianchaokeji",
         "uid":"1754443783083283",
         "nickname":"飞瓜智投运营号",
         "avatar":"https://p9.douyinpic.com/img/tos-cn-avt-0015/ed0098a80d03dd93d60cc8e2a1e042a0~c5_300x300.jpeg?from=2956013662",
-        "desc":"飞瓜数据旗下飞瓜智投",
+        "`desc`":"飞瓜数据旗下飞瓜智投",
         "praise":"0.00",
         "awemes":32,
         "like_count":188,
@@ -45,7 +53,7 @@ def test_add_douyin():
         "buyin_data":"",
         "buyin_token_at":"2021-06-08 14:06:41",
         "token":NULL,
-        "token_at":NULL,
+        "token_at":"2021-12-08 14:06:41",
         "open_douyin_id":0,
         "room_id":"1000",
         "dou_monitor":0,
@@ -55,8 +63,8 @@ def test_add_douyin():
         "edition_id":1,
         "auto_record":1,
         "auto_record_at":"2021-11-05 18:25:41",
-        "expired_at":NULL,
-        "off_at":NULL,
+        "expired_at":"2022-12-08 14:06:41",
+        # "off_at": NULL，如果想要该字段，直接显示默认值，直接整个字段不传就行,
         "last_auth_at":"2021-05-24 14:06:41",
         "is_first":0,
         "qc_source":0,
@@ -70,9 +78,6 @@ def test_add_douyin():
     keys=','.join(data.keys())
     # values1 = ','.join(data.values())
     values1=','.join(['%s']*len(data))
-    for va in data.values():
-        sql = 'insert into {table}({keys}) values ({values})'.format(table=table, keys=keys, values=values1)
-        values1=va
     # values1=data.values()
     # print(len(data))
     # print(table)
@@ -84,20 +89,20 @@ def test_add_douyin():
     # update = ','.join(["{key}=%s".format(key=key) for  key in data])
     # sql+= update
     print(sql)
-    # cur = conn.cursor()
-    # try:
-    #     # cur.execute(sql,tuple(data.values())*2)
-    #     cur.execute(sql)
-    #     conn.commit()
-    # except Exception as e:
-    #     print("操作异常:%s" % str(e))
-    #     conn.rollback()
-    # finally:
-    #     conn.close()
+    cur = conn.cursor()
+    try:
+        # cur.execute(sql,tuple(data.values())*2)
+        cur.execute(sql,tuple(data.values()))
+        conn.commit()
+    except Exception as e:
+        print("操作异常:%s" % str(e))
+        conn.rollback()
+    finally:
+        conn.close()
 
     # res_insert = insert_sql(sql,tuple(data.values())*2)
-
-
+#
+#
 
 
 test_add_douyin()
