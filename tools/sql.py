@@ -10,18 +10,26 @@
 ##
 #连接数据库#
 import pymysql
-conn = pymysql.connect(
-host='118.178.114.233',
-port=31445,
-user='root',
-password='AyoufenbBwoca123',
-db='douyin_livetools'
-)
-print(conn)
+# conn = pymysql.connect(
+# host='118.178.114.233',
+# port=31445,
+# user='root',
+# password='AyoufenbBwoca123',
+# db='douyin_livetools'
+# )
+# print(conn)
 
 
 #查询数据,sql设置为参数，直接查询即可#
 def select_sql(sel_sql):
+    conn = pymysql.connect(
+        host='118.178.114.233',
+        port=31445,
+        user='root',
+        password='AyoufenbBwoca123',
+        db='douyin_livetools'
+    )
+    print(conn)
     cur = conn.cursor()
     # sql = "select * from manager where username = 'wj_test' and deleted_at is null"
     # print(sql)
@@ -36,6 +44,14 @@ def select_sql(sel_sql):
 
 #删除数据#
 def detete_sql(del_sql):
+    conn = pymysql.connect(
+        host='118.178.114.233',
+        port=31445,
+        user='root',
+        password='AyoufenbBwoca123',
+        db='douyin_livetools'
+    )
+    print(conn)
     cur = conn.cursor()
     try:
         cur.execute(del_sql)
@@ -51,6 +67,14 @@ def detete_sql(del_sql):
 
 #更新数据#
 def update_sql(update_sql):
+    conn = pymysql.connect(
+        host='118.178.114.233',
+        port=31445,
+        user='root',
+        password='AyoufenbBwoca123',
+        db='douyin_livetools'
+    )
+    print(conn)
     cur = conn.cursor()
     try:
         cur.execute(update_sql)
@@ -64,6 +88,14 @@ def update_sql(update_sql):
 
 #插入数据#
 def insert_sql(insert_sql):
+    conn = pymysql.connect(
+        host='118.178.114.233',
+        port=31445,
+        user='root',
+        password='AyoufenbBwoca123',
+        db='douyin_livetools'
+    )
+    print(conn)
     cur = conn.cursor()
     try:
         cur.execute(insert_sql)
