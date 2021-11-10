@@ -8,6 +8,7 @@
 """
 #为该抖音号添加直播间#
 #douyin_room中新增一条记录，将原始的所有数据都关联到新的用户，原来的抖音号下#
+#更新#
 import pymysql
 import pytest
 import requests
