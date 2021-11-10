@@ -68,9 +68,10 @@ def test_add_douyin():
     table='douyin'
     # keys = data.keys()
     keys=','.join(data.keys())
-    values1 = ','.join(data.values())
-    # values=','.join(['%s']*len(data))
+    # values1 = ','.join(data.values())
+    values1=','.join(['%s']*len(data))
     for va in data.values():
+        sql = 'insert into {table}({keys}) values ({values})'.format(table=table, keys=keys, values=values1)
         values1=va
     # values1=data.values()
     # print(len(data))
@@ -83,16 +84,16 @@ def test_add_douyin():
     # update = ','.join(["{key}=%s".format(key=key) for  key in data])
     # sql+= update
     print(sql)
-    cur = conn.cursor()
-    try:
-        # cur.execute(sql,tuple(data.values())*2)
-        cur.execute(sql)
-        conn.commit()
-    except Exception as e:
-        print("操作异常:%s" % str(e))
-        conn.rollback()
-    finally:
-        conn.close()
+    # cur = conn.cursor()
+    # try:
+    #     # cur.execute(sql,tuple(data.values())*2)
+    #     cur.execute(sql)
+    #     conn.commit()
+    # except Exception as e:
+    #     print("操作异常:%s" % str(e))
+    #     conn.rollback()
+    # finally:
+    #     conn.close()
 
     # res_insert = insert_sql(sql,tuple(data.values())*2)
 
