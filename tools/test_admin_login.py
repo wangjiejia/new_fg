@@ -9,7 +9,7 @@
 #登录管理后台，获取管理后台token#
 import pytest
 import requests
-import tools.all_url
+
 import yaml
 import os
 from tools.get_yaml import read_yml

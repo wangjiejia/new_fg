@@ -24,11 +24,14 @@ def test_create_user():
     }
     res=requests.post(url=url,json=dict1,headers=headers)
     r=res.json()
+    # try:
+    assert r['code'] == 200
+    # except:
+    #     print("失败")
     print(r)
     # print((r['data'])['id'])
     # return (r['data'])['id']
 
-test_create_user()
 
 
 
