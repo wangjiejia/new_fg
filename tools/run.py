@@ -13,7 +13,7 @@ import rerun as rerun
 
 
 def run():
-    pass
+    print("执行开始")
 
 if __name__=='__main__':
     pytest.main(["-v", "-s", "./tools/test_admin_login/", "./tools/test_create_user/", "./tools/test_delete_user/", "--html=" + report, "--reruns", rerun])

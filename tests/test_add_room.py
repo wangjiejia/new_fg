@@ -68,4 +68,4 @@ def test_add_douyin():
          conn.rollback()
      finally:
          conn.close()
-test_add_douyin()
+
