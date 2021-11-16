@@ -31,14 +31,9 @@ def test_douyin_list():
     res = r.json()
     # r = json.dumps(res,indent=2,ensure_ascii=False)
     assert res['code'] == 200
-    assert (((res['data'])['list'])[0])['nickname'] == '三只松鼠'
+    assert (((res['data'])['list'])[0])['nickname'] == '花印旗舰店'
 
 
 
-
-
-#使用json对结果进行缩进输出#
-
-test_douyin_list()
-# if __name__=='__main__':
-#     pytest.main(['test_douyin_list.py'])
+if __name__=='__main__':
+    pytest.main(['test_douyin_list.py'])

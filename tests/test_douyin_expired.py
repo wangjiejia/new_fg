@@ -19,13 +19,17 @@ def test_douyin_expired():
     url = url1+"?"+"limit=10000"
     res=requests.get(url=url,headers=headers)
     r = res.json()
-    print()
     assert r['code'] == 200
-    print()
-    assert (((r['data'])['list'])[0])['nickname'] == "三只松鼠"
+    assert (((r['data'])['list'])[0])['nickname'] == "花印旗舰店"
 
+def test_douyin_expired_error():
+    url = url1
+    res = requests.get(url=url1,headers=headers)
+    r=res.json()
+    assert r['code'] == 200
+    assert (((r['data'])['list'])[0])['nickname'] == "花印旗舰店"
 
-test_douyin_expired()
+# test_douyin_expired_error()
 
 if __name__=='__main__':
     pytest.main(['test_douyin_expired.py'])

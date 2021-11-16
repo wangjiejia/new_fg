@@ -12,8 +12,6 @@ import sys
 def file_name():
     name = os.path.split(__file__)[-1].split(".")[0]
     return name
-
-
 file_name()
 
 

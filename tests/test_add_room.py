@@ -29,30 +29,30 @@ def test_add_douyin():
          password='AyoufenbBwoca123',
          db='douyin_livetools'
         )
-     res_select = select_sql("select id from manager ORDER BY id desc LIMIT 1")
+     res_select = select_sql("select id from manager where username = 'wj_test' ORDER BY id desc LIMIT 1")
      manager_id = res_select[0]
      print(manager_id)
      data = {
             "id": id,
             "manager_id": manager_id,
             "douyin_id": douyin_id,
-            "uid": "82914947908",
-            "room_id": "7018488034958002980",
-            "title":"三只松鼠坚果礼上新，假期旅游囤货必备！",
+            "uid": "4340475669264183",
+            "room_id": "7024331948672011021",
+            "title":"在等11.11日？双十一好物已经开抢啦！",
             "auto_record": 1,
             "is_show":1,
             "is_history": 0,
             "delete_status": 0,
-            "gmv": 20079290,
-            "cost": 4959861,
-            "order_num": 1558,
-            "start_time": '1634119334',
-            "duration": 28733,
+            "gmv": 466970,
+            "cost": 613908,
+            "order_num": 76,
+            "start_time": '1635480035',
+            "duration": 18022,
             "plan_id": 0,
             "tab_id": 0,
-            "updated_at": "2021-11-05 18:25:41",
-            "created_at": "2021-05-20 16:30:58",
-            "deleted_at": "2021-05-24 14:08:11"
+            "updated_at": "2021-10-29 17:14:41",
+            "created_at": "2021-10-29 12:02:03",
+            # "deleted_at": "2021-05-24 14:08:11"
         }
      table = 'douyin_room'
      keys = ','.join(data.keys())

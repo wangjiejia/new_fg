@@ -6,6 +6,7 @@ test_user_login: https://live-tools-qa1.youfenba.com/api/v1/login
 test_update_version: https://live-admin-qa1.youfenba.com/api/v1/manager/order
 test_douyin_list : https://live-admin-qa1.youfenba.com/api/v1/douyin_v2
 test_douyin_expired : https://live-tools-qa1.youfenba.com/api/v1/douyin_expired
+test_douyin: https://live-tools-qa1.youfenba.com/api/v1/api/v1/douyin
 
 
 
