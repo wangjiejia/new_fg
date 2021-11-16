@@ -28,10 +28,7 @@ def test_douyin_room():
     assert r['code'] == 200
     assert (((r['data'])[0])['douyin'])['nickname'] == '花印旗舰店'
     print(res.json())
-
 test_douyin_room()
 #查看正在直播中#
-#
-#
 if __name__=='__main__':
     pytest.main(['test_douyin_room.py'])
