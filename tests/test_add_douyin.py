@@ -13,6 +13,7 @@ import os
 import pymysql
 from pymysql import NULL
 from tools.sql import select_sql,insert_sql
+from tools import test_admin_login
 def test_douyin_id():
     ids =  select_sql("select id from douyin ORDER BY id desc LIMIT 1")
     id = ids[0]+1
@@ -28,7 +29,7 @@ def test_add_douyin():
         db='douyin_livetools'
     )
     print(conn)
-    res_select = select_sql("select id from manager ORDER BY id desc LIMIT 1")
+    res_select = select_sql("select id from manager where username = 'wj_test' ORDER BY id desc LIMIT 1")
     manager_id = res_select[0]
     data = {
         "id":id,
@@ -36,7 +37,7 @@ def test_add_douyin():
         "account":"songshu0619",
         "uid":"82914947908",
         "nickname":"三只松鼠",
-        "avatar":"https://p3.huoshanimg.com/img/aweme-avatar/mosaic-legacy_31915000811b51868fe24~c5_300x300.jpeg?from=2956013662",
+        "avatar":"https://p9.huoshanimg.com/img/aweme-avatar/mosaic-legacy_31915000811b51868fe24~c5_300x300.jpeg?from=2956013662",
         "`desc`":"吃坚果、找快乐、来三只松鼠就够了",
         "praise":"0.00",
         "awemes":593,
@@ -45,13 +46,13 @@ def test_add_douyin():
         "with_shop":0,
         "dou":0,
         "balance":0,
-        "origin_uid":NULL,
+        # "origin_uid":NULL,
         "buyin_status":5,
         "buyin_token":"livetools_token:buyin:e82e5ff532c59c313e7cf7d4687d0fdc_lf",
         "buyin_data":"",
         "buyin_token_at":"2021-06-08 14:06:41",
-        "token":NULL,
-        "token_at":"2021-12-08 14:06:41",
+        # "token":NULL,
+        # "token_at":"2021-12-08 14:06:41",
         "open_douyin_id":0,
         "room_id":"1000",
         "dou_monitor":0,
@@ -61,7 +62,7 @@ def test_add_douyin():
         "edition_id":1,
         "auto_record":1,
         "auto_record_at":"2021-11-05 18:25:41",
-        "expired_at":"2022-12-08 14:06:41",
+        # "expired_at":"2022-12-08 14:06:41",
         # "off_at": NULL，如果想要该字段，直接显示默认值，直接整个字段不传就行,
         "last_auth_at":"2021-05-24 14:06:41",
         "is_first":0,
@@ -69,7 +70,7 @@ def test_add_douyin():
         "exception":0,
         "created_at":"2021-05-20 16:30:58",
         "updated_at":"2021-11-05 18:25:41",
-        "deleted_at":"2021-05-24 14:08:11"
+        # "deleted_at":"2021-05-24 14:08:11"
     }
     table='douyin'
     # keys = data.keys()

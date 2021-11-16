@@ -4,6 +4,7 @@ test_create_user: https://live-admin-qa1.youfenba.com/api/v1/manager
 test_delete_user: https://live-admin-qa1.youfenba.com/api/v1/manager/
 test_user_login: https://live-tools-qa1.youfenba.com/api/v1/login
 test_update_version: https://live-admin-qa1.youfenba.com/api/v1/manager/order
+test_douyin_list : https://live-admin-qa1.youfenba.com/api/v1/douyin_v2
 
 
 

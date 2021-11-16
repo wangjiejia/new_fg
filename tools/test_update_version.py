@@ -13,7 +13,7 @@ from tools.get_yaml import read_yml
 from tools.test_admin_login  import test_headers
 from tools.sql import select_sql
 def test_update_version():
-    user_id = select_sql("select id from manager where username = 'wj_test'")
+    user_id = select_sql("select id from manager where username = 'wj_test' ORDER BY id DESC")
     url = (read_yml()).get(os.path.split(__file__)[-1].split(".")[0])
     header =  test_headers()
     dict={
