@@ -32,7 +32,7 @@ def test_create_user():
     print(r)
     # print((r['data'])['id'])
     # return (r['data'])['id']
-
+test_create_user()
 
 
 

@@ -6,6 +6,7 @@
 @IDE ：PyCharm
 @Motto：ABC(Always Be Coding)
 """
+#删除douyin_room关联的直播间数据#
 from tools.sql import detete_sql,select_sql
 
 def test_delete_douyin_room():
@@ -14,5 +15,3 @@ def test_delete_douyin_room():
     sql = "delete from douyin_room where manager_id = %s"%(manager_id)
     print(sql)
     exe_sql = detete_sql(sql)
-
-test_delete_douyin_room()
