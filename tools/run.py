@@ -11,11 +11,8 @@ import pytest
 import report
 import rerun as rerun
 import allure
-
-
 def run():
     print("执行开始")
-
 if __name__=='__main__':
     pytest.main(["-v", "-s",
                  "./test_admin_login.py","./test_create_user.py",
