@@ -11,6 +11,9 @@ test_douyin_room: https://live-tools-qa1.youfenba.com/api/v1/data/home/rooms
 test_room_list: https://live-tools-qa1.youfenba.com/api/v1/data/douyin/analyze/lists
 test_manager: https://live-tools-qa1.youfenba.com/api/v1/manager
 test_update_manager_name: https://live-tools-qa1.youfenba.com/api/v1/sub_manager
+test_sub_manager: https://live-tools-qa1.youfenba.com/api/v1/sub_manager
+test_role_manager: https://live-tools-qa1.youfenba.com/api/v1/role_manager
+test_create_sub_manager: ttps://live-tools-qa1.youfenba.com/api/v1/sub_manager
 
 
 
