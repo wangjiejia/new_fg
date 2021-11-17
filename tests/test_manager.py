@@ -34,8 +34,15 @@ def test_manager():
 
 def test_update_manager_name():
     manager_id = select_sql("select id from manager where username='wj_test' and  deleted_at is null order by id desc ")
+    data={
+        "name":"ceshi101",
+        "douyin_ids":[]
+    }
+    url=(read_yml()).get(os.path.split(__file__)[-1].split(".")[0])+"/"+str(manager_id[0])
+    print(url)
+    res = requests.put(url=url,data=data,headers=headers)
+    r=res.json()
+    print(r)
+test_update_manager_name()
 
 
-
-
-test_manager()
