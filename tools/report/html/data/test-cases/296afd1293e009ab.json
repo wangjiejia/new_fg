@@ -1,0 +1,53 @@
+{
+  "uid" : "296afd1293e009ab",
+  "name" : "test_passwderror",
+  "fullName" : "tests.test_user_login#test_passwderror",
+  "historyId" : "570aede2a2fca2f6ee60fbdb70a133cb",
+  "time" : {
+    "start" : 1637116546363,
+    "stop" : 1637116546640,
+    "duration" : 277
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_user_login"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-4H0T4A2"
+  }, {
+    "name" : "thread",
+    "value" : "11296-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_user_login"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "296afd1293e009ab.json",
+  "parameterValues" : [ ]
+}

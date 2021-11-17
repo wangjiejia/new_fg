@@ -1,0 +1,53 @@
+{
+  "uid" : "847cfc732e76baf0",
+  "name" : "test_update_version",
+  "fullName" : "tools.test_update_version#test_update_version",
+  "historyId" : "3af47c54cd2a5fd7819a6a4bb48349cb",
+  "time" : {
+    "start" : 1637116544035,
+    "stop" : 1637116544721,
+    "duration" : 686
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "tools"
+  }, {
+    "name" : "suite",
+    "value" : "test_update_version"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-4H0T4A2"
+  }, {
+    "name" : "thread",
+    "value" : "11296-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tools.test_update_version"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "847cfc732e76baf0.json",
+  "parameterValues" : [ ]
+}

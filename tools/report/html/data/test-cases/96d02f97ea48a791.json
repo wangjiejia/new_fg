@@ -1,0 +1,53 @@
+{
+  "uid" : "96d02f97ea48a791",
+  "name" : "test_passwdisnull",
+  "fullName" : "tests.test_user_login#test_passwdisnull",
+  "historyId" : "825f9dba4817632c559d54d8319e6187",
+  "time" : {
+    "start" : 1637116545422,
+    "stop" : 1637116545692,
+    "duration" : 270
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_user_login"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-4H0T4A2"
+  }, {
+    "name" : "thread",
+    "value" : "11296-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_user_login"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "96d02f97ea48a791.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,53 @@
+{
+  "uid" : "f14401d601f7a230",
+  "name" : "test_douyin_id",
+  "fullName" : "tests.test_add_douyin#test_douyin_id",
+  "historyId" : "f933fadc53ba370689d593397a3c89b5",
+  "time" : {
+    "start" : 1637116546643,
+    "stop" : 1637116546683,
+    "duration" : 40
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_add_douyin"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-4H0T4A2"
+  }, {
+    "name" : "thread",
+    "value" : "11296-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_add_douyin"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "f14401d601f7a230.json",
+  "parameterValues" : [ ]
+}

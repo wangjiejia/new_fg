@@ -1,0 +1,53 @@
+{
+  "uid" : "962faf61c8f7f10c",
+  "name" : "test_headers",
+  "fullName" : "tools.test_admin_login#test_headers",
+  "historyId" : "e8dd969e35e144b475058f7de3585639",
+  "time" : {
+    "start" : 1637116543129,
+    "stop" : 1637116543400,
+    "duration" : 271
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "tools"
+  }, {
+    "name" : "suite",
+    "value" : "test_admin_login"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-4H0T4A2"
+  }, {
+    "name" : "thread",
+    "value" : "11296-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tools.test_admin_login"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "962faf61c8f7f10c.json",
+  "parameterValues" : [ ]
+}
