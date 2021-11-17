@@ -10,6 +10,7 @@ test_douyin: https://live-tools-qa1.youfenba.com/api/v1/douyin?
 test_douyin_room: https://live-tools-qa1.youfenba.com/api/v1/data/home/rooms
 test_room_list: https://live-tools-qa1.youfenba.com/api/v1/data/douyin/analyze/lists
 test_manager: https://live-tools-qa1.youfenba.com/api/v1/manager
+test_update_manager_name: ttps://live-tools-qa1.youfenba.com/api/v1/sub_manager
 
 
 
