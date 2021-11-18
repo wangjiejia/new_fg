@@ -29,11 +29,13 @@ def test_douyin_list():
     }
     r=requests.get(url=url,headers=headers)
     res = r.json()
+    print(res)
     # r = json.dumps(res,indent=2,ensure_ascii=False)
     assert res['code'] == 200
     assert (((res['data'])['list'])[0])['nickname'] == '花印旗舰店'
 
-
-
-if __name__=='__main__':
-    pytest.main(['test_douyin_list.py'])
+test_douyin_list()
+#
+#
+# if __name__=='__main__':
+#     pytest.main(['test_douyin_list.py'])
