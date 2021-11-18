@@ -12,4 +12,12 @@ import requests
 from tools.gettoken import gettoken
 from tools.get_yaml import read_yml
 url = (read_yml()).get(os.path.split(__file__)[-1].split(".")[0])
+headers=gettoken()
 def test_create_sub_manager():
+    res=requests.get(url=url,headers=headers)
+    r=res.json()
+    print(r)
+
+
+test_create_sub_manager()
+
