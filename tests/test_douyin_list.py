@@ -29,12 +29,15 @@ def test_douyin_list():
     }
     r=requests.get(url=url,headers=headers)
     res = r.json()
-    print(res)
+    # print(res)
+    douyin_id = (((res['data'])['list'])[0])['id']
+
     # r = json.dumps(res,indent=2,ensure_ascii=False)
     assert res['code'] == 200
     assert (((res['data'])['list'])[0])['nickname'] == '花印旗舰店'
+    return douyin_id
 
-test_douyin_list()
+
 #
 #
 # if __name__=='__main__':
