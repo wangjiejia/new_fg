@@ -16,8 +16,17 @@ header=test_headers()
 def test_del_user():
     del_res = detete_sql("delete  from manager where username = 'wj_test' and deleted_at is null")
 
+#搜索出创建成功的用户ID，再进行删除#
+def test_seh_user():
+    seh_res = select_sql("select * from manager where username='wj_test' order by id desc")
+    manager_id = seh_res[0]
+    return manager_id
+
 #删除douyin_room里面关联的数据#
 def test_del_douyin_room():
-    del_res = detete_sql("delete from douyin_room where manager_id = %s",)
+    manager_id = test_seh_user()
+    sql = "delete from douyin_room where manager_id = %s",%manager_id
+    print(sql)
+    # del_res = detete_sql("delete from douyin_room where manager_id = %s",manager_id)
 
-test_del_user()
+test_del_douyin_room()
