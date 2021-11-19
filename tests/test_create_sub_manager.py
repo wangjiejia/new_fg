@@ -9,6 +9,7 @@
 #创建子账户#
 import os
 import requests
+import pytest
 from tests.test_douyin_list import test_douyin_list
 from tools.gettoken import gettoken
 from tools.get_yaml import read_yml
@@ -47,6 +48,7 @@ def test_CreateFail1():
     r=res.json()
     assert r['code'] != 200
     assert r['message'] == "请填写员工姓名"
+
     #未选择抖音号，添加成功#
 def test_CreateSub():
     dict = {
@@ -57,8 +59,24 @@ def test_CreateSub():
     r = res.json()
     assert r['code'] == 200
 
-
     #添加成功后的
 def test_CreateSubManagerSearch():
+    dict={
+        "page":1,
+        "name":"wangjiejia接口新增1",
+        "status":0
+    }
+    res = requests.get(url=url,headers=headers,json=dict)
+    r=res.json()
+    print(r)
+
+#创建成功后#
+
+
+if __name__=='__main__':
+    pytest.main(['test_create_sub_manager.py'])
+
+
+
 
 
