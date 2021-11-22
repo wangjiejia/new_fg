@@ -6,13 +6,14 @@
 @IDE ：PyCharm
 @Motto：ABC(Always Be Coding)
 """
-
 import pytest
 import requests
 import os
 from tools import test_admin_login
 from tools.get_yaml import read_yml
 test_headers= test_admin_login.test_headers()
+
+
 def test_create_user():
     headers=test_headers
     url = (read_yml()).get(os.path.split(__file__)[-1].split(".")[0])

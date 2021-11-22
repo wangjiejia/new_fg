@@ -12,10 +12,12 @@ import unittest
 from tools.test_admin_login import test_headers
 from tools.sql import select_sql,detete_sql
 
+
 header=test_headers()
 #删除用户#
 def test_del_user():
     del_res = detete_sql("delete  from manager where username = 'wj_test' and deleted_at is null")
+
 
 #搜索出创建成功的用户ID，再进行删除#
 def test_seh_user():

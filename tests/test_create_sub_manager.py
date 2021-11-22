@@ -69,8 +69,9 @@ def test_CreateSubManagerSearch():
     res = requests.get(url=url,headers=headers,json=dict)
     r=res.json()
     print(r)
-
 #创建成功后#
+
+
 
 
 if __name__=='__main__':
