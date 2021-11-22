@@ -7,7 +7,8 @@
 @Motto：ABC(Always Be Coding)
 """
 #数据清理，在所有验证结束后；删除创建的所有数据#
-import pytest
+
+import unittest
 from tools.test_admin_login import test_headers
 from tools.sql import select_sql,detete_sql
 
@@ -22,11 +23,19 @@ def test_seh_user():
     manager_id = seh_res[0]
     return manager_id
 
+
 #删除douyin_room里面关联的数据#
-def test_del_douyin_room():时
+def test_del_douyin_room():
     manager_id = test_seh_user()
-    sql = "delete from douyin_room where manager_id = %s",%manager_id
-    print(sql)
+    sql = "delete from douyin_room where manager_id = %s"%manager_id
+    detete_sql(sql)
     # del_res = detete_sql("delete from douyin_room where manager_id = %s",manager_id)
+
+#删除关联的员工账户#
+# def test_del_sub_manager():
+#     manager_id = test_seh_user()
+#     sql = "delete from where name like '%wangjiejia接口新增%'"
+#     detete_sql(sql)
+
 
 test_del_douyin_room()
