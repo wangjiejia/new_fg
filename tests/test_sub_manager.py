@@ -27,7 +27,8 @@ def test_sub_manager():
     res = requests.get(url=url,headers=headers)
     r=res.json()
     assert r['code'] == 200
-    print(r)
+
+    print(((r['data'])['list'])[0].)
 
     #查找冻结的员工#
 def test_sub_manager_1():
