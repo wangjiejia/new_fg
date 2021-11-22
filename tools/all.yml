@@ -15,7 +15,7 @@ test_sub_manager: https://live-tools-qa1.youfenba.com/api/v1/sub_manager
 test_role_manager: https://live-tools-qa1.youfenba.com/api/v1/role_manager
 test_create_sub_manager: https://live-tools-qa1.youfenba.com/api/v1/sub_manager
 test_DouyinManager: https://live-tools-qa1.youfenba.com/api/v1/douyin_manager
-
+test_EditSubManager: https://live-tools-qa1.youfenba.com/api/v1/manager
 
 
 

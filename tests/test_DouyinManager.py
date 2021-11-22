@@ -19,8 +19,8 @@ def test_DouyinManager():
     dict={}
     res=requests.get(url=url,json=dict,headers=headers)
     r=res.json()
-    m=json.dumps( r,indent=2,ensure_ascii=False)
-    print(m)
-    print(m[0])
+    # m=json.dumps( r,indent=2,ensure_ascii=False)
+    assert r['code'] == 200
+    assert (((r['data'])['list'])[0])['nickname'] == '花印旗舰店'
 
 test_DouyinManager()
