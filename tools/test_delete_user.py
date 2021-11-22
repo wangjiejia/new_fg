@@ -23,7 +23,7 @@ def test_seh_user():
     return manager_id
 
 #删除douyin_room里面关联的数据#
-def test_del_douyin_room():
+def test_del_douyin_room():时
     manager_id = test_seh_user()
     sql = "delete from douyin_room where manager_id = %s",%manager_id
     print(sql)
