@@ -23,7 +23,7 @@ def test_seh_user():
     manager_id = seh_res[0]
     return manager_id
 
-
+##
 #删除douyin_room里面关联的数据#
 def test_del_douyin_room():
     manager_id = test_seh_user()
