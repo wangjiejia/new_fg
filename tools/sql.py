@@ -20,6 +20,8 @@ import pymysql
 # print(conn)
 
 
+
+
 #查询数据,sql设置为参数，直接查询即可#
 def select_sql(sel_sql):
     conn = pymysql.connect(
