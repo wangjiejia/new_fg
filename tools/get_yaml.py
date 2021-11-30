@@ -12,7 +12,7 @@ from distutils.log import info
 import yaml
 import os
 def read_yml():
-    with open('C:\/Users\/1\/PycharmProjects\/new_fg\/tools\/all.yml',encoding='UTF-8')as f:
+    with open('C:\/Users\/1\/PycharmProjects\/new_fg\/tools\/all.yml',encoding='UTF-8') as f:
         data = yaml.load(f,Loader=yaml.FullLoader)
         return data
         #输出当前文件的文件名#
